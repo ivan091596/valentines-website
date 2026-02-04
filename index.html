@@ -479,7 +479,6 @@
     <section id="music">
       <div class="sectionHead">
         <h2>Our song</h2>
-        <p>Optional: paste a Spotify embed link.</p>
       </div>
 
       <div class="card">
@@ -671,28 +670,11 @@ Ivan`
     noBtn.addEventListener("mouseenter", dodge);
     noBtn.addEventListener("click", dodge);
 
-    // ---------- Personalize ----------
-    $("btnEdit").addEventListener("click", () => {
-      const yourName = prompt("Your name:", SETTINGS.yourName) ?? SETTINGS.yourName;
-      const theirName = prompt("Their name:", SETTINGS.theirName) ?? SETTINGS.theirName;
-      const headline = prompt("Headline text:", SETTINGS.headline) ?? SETTINGS.headline;
-      const subtitle = prompt("Subtitle text:", SETTINGS.subtitle) ?? SETTINGS.subtitle;
-
-      const letter = prompt("Paste your love letter (you can include line breaks):", SETTINGS.letter) ?? SETTINGS.letter;
-
-      SETTINGS.yourName = yourName.trim() || SETTINGS.yourName;
-      SETTINGS.theirName = theirName.trim() || SETTINGS.theirName;
-      SETTINGS.headline = headline.trim() || SETTINGS.headline;
-      SETTINGS.subtitle = subtitle.trim() || SETTINGS.subtitle;
-      SETTINGS.letter = letter;
-
-      applySettings();
-      burstHearts(10);
-      alert("Updated! ✅ (Tip: edit the SETTINGS object in the code to make it permanent.)");
     });
   </script>
 </body>
 </html>
+
 
 
 
